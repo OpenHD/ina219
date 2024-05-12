@@ -35,8 +35,10 @@ INA219::~INA219()
 void
 INA219::init_i2c(uint8_t address)
 {
+	std::cout << "Given i2c Port:" << std::hex << static_cast<int>(__PORT) << std::endl;
 	char *filename = (char*)("/dev/i2c-"+__PORT);
-	
+	std::cout << "Initialized INA219 Port" << std::hex << static_cast<int>(filename) << std::endl;
+
 	if ((_file_descriptor = open(filename, O_RDWR)) < 0)
 	{
 		perror("Failed to open the i2c bus");
