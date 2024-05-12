@@ -6,6 +6,7 @@
 #include <linux/i2c-dev.h>
 #include <bitset>
 #include <math.h>
+#include <iostream>
 
 INA219::INA219(float shunt_resistance, float max_expected_amps)
 {
