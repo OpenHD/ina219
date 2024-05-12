@@ -2,6 +2,7 @@
 #include "src/ina219.h"
 
 constexpr float SHUNT_OHMS = 0.1f;
+constexpr int PORT= 2;
 constexpr float MAX_EXPECTED_AMPS = 3.2f;
 constexpr uint16_t RANGE = RANGE_16V;
 constexpr uint8_t GAIN = GAIN_8_320MV;
