@@ -32,9 +32,7 @@ void INA219::init_i2c(uint8_t address) {
   sprintf(filename, "/dev/i2c-%d", _port);
   if ((_file_descriptor = open(filename, O_RDWR)) < 0) {
     perror("Failed to open the i2c bus");
-	std::string port_string = std::to_string(_port);
-    perror(port_string.c_str());
-	perror(_port);
+	printf("Port: %d\n", _port);
     has_any_error = true;
   }
   if (ioctl(_file_descriptor, I2C_SLAVE, address) < 0) {
