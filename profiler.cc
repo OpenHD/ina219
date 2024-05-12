@@ -1,5 +1,6 @@
 #include <iostream>
 #include "src/ina219.h"
+#include <math.h>
 
 constexpr float SHUNT_OHMS = 0.1f;
 constexpr int PORT= 2;
