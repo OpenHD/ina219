@@ -12,7 +12,7 @@ constexpr uint8_t SHUNT_ADC = ADC_12BIT;
 
 int main(int argc, char *argv[])
 {
-    INA219 i(SHUNT_OHMS, MAX_EXPECTED_AMPS);
+    INA219 i(PORT, SHUNT_OHMS, MAX_EXPECTED_AMPS);
     i.configure(RANGE, GAIN, BUS_ADC, SHUNT_ADC);
 
     float voltage = roundf(i.voltage() * 1000) / 1000;
