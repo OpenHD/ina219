@@ -10,6 +10,7 @@
 INA219::INA219(float shunt_resistance, float max_expected_amps)
 {
 	init_i2c(__ADDRESS);
+	printf(__ADDRESS);
 
 	_shunt_ohms = shunt_resistance;
 	_max_expected_amps = max_expected_amps;
