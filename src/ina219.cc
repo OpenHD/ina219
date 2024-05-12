@@ -11,7 +11,7 @@
 INA219::INA219(float shunt_resistance, float max_expected_amps)
 {
 	init_i2c(__ADDRESS);
-    std::cout << "Initialized INA219 at address: 0x" << std::hex << static_cast<int>(_address) << std::endl;
+    std::cout << "Initialized INA219 at address: 0x" << std::hex << static_cast<int>(__ADDRESS) << std::endl;
 
 	_shunt_ohms = shunt_resistance;
 	_max_expected_amps = max_expected_amps;
